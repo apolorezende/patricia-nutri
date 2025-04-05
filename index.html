@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,10 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#fb7185',
-                        secondary: '#fecdd3',
-                        dark: '#1f2937',
-                        light: '#f9fafb'
+                        primary: '#d177a7',     // Rosa magenta (base)
+                        secondary: '#f4cce0',   // Rosa claro pastel
+                        dark: '#b14e82',        // Rosa escuro para contraste (ex: texto)
+                        light: '#ffe9f2',       // Rosa muito claro para fundos
                     },
                     fontFamily: {
                         sans: ['Poppins', 'sans-serif'],
@@ -25,47 +26,59 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         .hero-pattern {
             background-image: radial-gradient(circle at 10% 20%, rgba(254, 205, 211, 0.2) 0%, rgba(254, 205, 211, 0.1) 90%);
         }
-        
+
         .menu-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(251, 113, 133, 0.4);
         }
-        
+
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
-        
+
         @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
-        
+
         .pink-dots {
             background-image: radial-gradient(circle, #fecdd3 1px, transparent 1px);
             background-size: 15px 15px;
         }
     </style>
 </head>
+
 <body class="bg-light">
     <!-- Header/Navigation -->
     <header class="fixed w-full bg-white shadow-sm z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl">NV</div>
-                    <span class="ml-3 text-xl font-semibold text-dark">Nutri<span class="text-primary">Vida</span></span>
+                    <div
+                        class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl">
+                        NV</div>
+                    <span class="ml-3 text-xl font-semibold text-dark">Nutri<span
+                            class="text-primary">Vida</span></span>
                 </div>
-                
+
                 <nav class="hidden md:flex space-x-8">
                     <a href="#home" class="text-dark hover:text-primary transition">Início</a>
                     <a href="#about" class="text-dark hover:text-primary transition">Sobre</a>
@@ -73,13 +86,15 @@
                     <a href="#menu" class="text-dark hover:text-primary transition">Cardápio</a>
                     <a href="#contact" class="text-dark hover:text-primary transition">Contato</a>
                 </nav>
-                
+
                 <button class="md:hidden text-dark">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
-                
+
                 <div class="hidden md:block">
-                    <a href="#contact" class="bg-primary hover:bg-opacity-90 text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-pink-200">Agendar Consulta</a>
+                    <a href="#contact"
+                        class="bg-primary hover:bg-opacity-90 text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-pink-200">Agendar
+                        Consulta</a>
                 </div>
             </div>
         </div>
@@ -93,23 +108,25 @@
                     Nutrição <span class="text-primary">Personalizada</span> para sua melhor versão
                 </h1>
                 <p class="text-gray-600 mt-6 text-lg max-w-lg">
-                    Transforme sua relação com a comida e alcance seus objetivos de saúde com um plano alimentar feito especialmente para você.
+                    Transforme sua relação com a comida e alcance seus objetivos de saúde com um plano alimentar feito
+                    especialmente para você.
                 </p>
                 <div class="mt-8 flex space-x-4">
-                    <a href="#contact" class="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-full font-medium transition shadow-lg shadow-pink-200">
+                    <a href="#contact"
+                        class="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-full font-medium transition shadow-lg shadow-pink-200">
                         Começar Agora
                     </a>
-                    <a href="#services" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full font-medium transition">
+                    <a href="#services"
+                        class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full font-medium transition">
                         Nossos Serviços
                     </a>
                 </div>
             </div>
-            
+
             <div class="md:w-1/2 relative">
                 <div class="relative z-10">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                         alt="Nutricionista profissional" 
-                         class="rounded-2xl shadow-2xl w-full max-w-md mx-auto">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                        alt="Nutricionista profissional" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto">
                 </div>
                 <div class="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-secondary z-0"></div>
                 <div class="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-primary opacity-20 z-0"></div>
@@ -125,45 +142,51 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2">Conheça sua Nutricionista</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
             </div>
-            
+
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/3 mb-10 md:mb-0 relative">
                     <div class="p-2 bg-white rounded-2xl shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="Dra. Ana Souza" 
-                             class="rounded-xl w-full">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Dra. Ana Souza" class="rounded-xl w-full">
                     </div>
                     <div class="absolute -bottom-5 -right-5 bg-primary text-white px-6 py-2 rounded-full shadow-lg">
                         <span class="font-medium">Dra. Ana Souza</span>
                     </div>
                 </div>
-                
+
                 <div class="md:w-2/3 md:pl-16">
                     <h3 class="text-2xl font-bold text-dark mb-4">Especialista em Nutrição Clínica e Esportiva</h3>
                     <p class="text-gray-600 mb-6">
-                        Formada pela Universidade Federal de São Paulo com especialização em Nutrição Clínica e Esportiva. Com mais de 8 anos de experiência, ajudo meus pacientes a desenvolverem hábitos alimentares saudáveis que se encaixam em seu estilo de vida.
+                        Formada pela Universidade Federal de São Paulo com especialização em Nutrição Clínica e
+                        Esportiva. Com mais de 8 anos de experiência, ajudo meus pacientes a desenvolverem hábitos
+                        alimentares saudáveis que se encaixam em seu estilo de vida.
                     </p>
                     <p class="text-gray-600 mb-6">
-                        Acredito que a nutrição vai além da contagem de calorias. Meu foco está em ajudar você a construir uma relação positiva com a comida, enquanto alcança seus objetivos de saúde e bem-estar.
+                        Acredito que a nutrição vai além da contagem de calorias. Meu foco está em ajudar você a
+                        construir uma relação positiva com a comida, enquanto alcança seus objetivos de saúde e
+                        bem-estar.
                     </p>
-                    
+
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
                         <div class="bg-secondary bg-opacity-30 p-4 rounded-lg">
-                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mb-3">
+                            <div
+                                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mb-3">
                                 <i class="fas fa-graduation-cap text-xl"></i>
                             </div>
                             <h4 class="font-bold text-dark">Formação</h4>
                             <p class="text-sm text-gray-600">UNIFESP + Pós</p>
                         </div>
                         <div class="bg-secondary bg-opacity-30 p-4 rounded-lg">
-                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mb-3">
+                            <div
+                                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mb-3">
                                 <i class="fas fa-users text-xl"></i>
                             </div>
                             <h4 class="font-bold text-dark">Pacientes</h4>
                             <p class="text-sm text-gray-600">500+ Atendidos</p>
                         </div>
                         <div class="bg-secondary bg-opacity-30 p-4 rounded-lg">
-                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mb-3">
+                            <div
+                                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mb-3">
                                 <i class="fas fa-star text-xl"></i>
                             </div>
                             <h4 class="font-bold text-dark">Experiência</h4>
@@ -183,10 +206,11 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2">Como Posso Ajudar Você</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
+                    <div
+                        class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
                         <i class="fas fa-weight text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-3">Controle de Peso</h3>
@@ -194,9 +218,10 @@
                         Planos alimentares personalizados para perda ou ganho de peso de forma saudável e sustentável.
                     </p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
+                    <div
+                        class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
                         <i class="fas fa-running text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-3">Nutrição Esportiva</h3>
@@ -204,9 +229,10 @@
                         Otimização do desempenho esportivo e recuperação muscular através da nutrição adequada.
                     </p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
+                    <div
+                        class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
                         <i class="fas fa-heartbeat text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-3">Saúde Metabólica</h3>
@@ -214,9 +240,10 @@
                         Acompanhamento nutricional para diabetes, colesterol alto, hipertensão e outras condições.
                     </p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
+                    <div
+                        class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
                         <i class="fas fa-baby text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-3">Nutrição Materno-Infantil</h3>
@@ -224,9 +251,10 @@
                         Acompanhamento nutricional na gestação, lactação e introdução alimentar para bebês.
                     </p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
+                    <div
+                        class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
                         <i class="fas fa-utensils text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-3">Reeducação Alimentar</h3>
@@ -234,9 +262,10 @@
                         Desenvolva hábitos alimentares saudáveis que você pode manter por toda a vida.
                     </p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
+                    <div
+                        class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mb-6">
                         <i class="fas fa-leaf text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-3">Dietas Especiais</h3>
@@ -256,15 +285,15 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2">Opções Saudáveis e Saborosas</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Menu Item 1 -->
                 <div class="menu-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="Bowl de quinoa" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Bowl de quinoa" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                             Vegano
                         </div>
                     </div>
@@ -279,14 +308,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Menu Item 2 -->
                 <div class="menu-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="Salada colorida" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Salada colorida" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                             Low Carb
                         </div>
                     </div>
@@ -301,14 +330,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Menu Item 3 -->
                 <div class="menu-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="Smoothie bowl" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Smoothie bowl" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                             Sem lactose
                         </div>
                     </div>
@@ -323,14 +352,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Menu Item 4 -->
                 <div class="menu-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="Wrap saudável" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Wrap saudável" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                             Integral
                         </div>
                     </div>
@@ -345,14 +374,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Menu Item 5 -->
                 <div class="menu-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="Sopa cremosa" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Sopa cremosa" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                             Vegano
                         </div>
                     </div>
@@ -367,14 +396,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Menu Item 6 -->
                 <div class="menu-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="Panqueca saudável" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Panqueca saudável" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                             Sem glúten
                         </div>
                     </div>
@@ -390,9 +419,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
-                <a href="#contact" class="inline-block bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-full font-medium transition shadow-lg shadow-pink-200">
+                <a href="#contact"
+                    class="inline-block bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-full font-medium transition shadow-lg shadow-pink-200">
                     Peça seu Cardápio Personalizado
                 </a>
             </div>
@@ -407,12 +437,13 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2">O que dizem nossos clientes</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente 1" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente 1"
+                                class="w-full h-full object-cover">
                         </div>
                         <div class="ml-4">
                             <h4 class="font-bold text-dark">Mariana R.</h4>
@@ -426,14 +457,17 @@
                         </div>
                     </div>
                     <p class="text-gray-600">
-                        "Perdi 12kg em 4 meses sem passar fome! A Dra. Ana me ensinou a comer melhor e hoje me sinto muito mais disposta. O plano alimentar foi fácil de seguir e se encaixou perfeitamente na minha rotina."
+                        "Perdi 12kg em 4 meses sem passar fome! A Dra. Ana me ensinou a comer melhor e hoje me sinto
+                        muito mais disposta. O plano alimentar foi fácil de seguir e se encaixou perfeitamente na minha
+                        rotina."
                     </p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-xl shadow">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente 2" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente 2"
+                                class="w-full h-full object-cover">
                         </div>
                         <div class="ml-4">
                             <h4 class="font-bold text-dark">Ricardo T.</h4>
@@ -447,14 +481,16 @@
                         </div>
                     </div>
                     <p class="text-gray-600">
-                        "Como atleta amador, a nutrição fez toda diferença no meu desempenho. Ganhei massa muscular e minha recuperação pós-treino melhorou muito. Acompanhamento excelente!"
+                        "Como atleta amador, a nutrição fez toda diferença no meu desempenho. Ganhei massa muscular e
+                        minha recuperação pós-treino melhorou muito. Acompanhamento excelente!"
                     </p>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-xl shadow">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente 3" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente 3"
+                                class="w-full h-full object-cover">
                         </div>
                         <div class="ml-4">
                             <h4 class="font-bold text-dark">Fernanda C.</h4>
@@ -468,7 +504,8 @@
                         </div>
                     </div>
                     <p class="text-gray-600">
-                        "Depois de anos tentando dietas malucas, finalmente encontrei um método que funciona. Aprendi a me alimentar bem e mantive o peso por mais de um ano. Recomendo muito!"
+                        "Depois de anos tentando dietas malucas, finalmente encontrei um método que funciona. Aprendi a
+                        me alimentar bem e mantive o peso por mais de um ano. Recomendo muito!"
                     </p>
                 </div>
             </div>
@@ -483,30 +520,34 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2">Agende sua Consulta</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
             </div>
-            
+
             <div class="flex flex-col lg:flex-row gap-12">
                 <div class="lg:w-1/2">
                     <h3 class="text-2xl font-bold text-dark mb-6">Entre em Contato</h3>
-                    
+
                     <form class="space-y-6">
                         <div>
                             <label for="name" class="block text-gray-700 mb-2">Nome Completo</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <input type="text" id="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                         </div>
-                        
+
                         <div>
                             <label for="email" class="block text-gray-700 mb-2">E-mail</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <input type="email" id="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                         </div>
-                        
+
                         <div>
                             <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <input type="tel" id="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                         </div>
-                        
+
                         <div>
                             <label for="service" class="block text-gray-700 mb-2">Serviço de Interesse</label>
-                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <select id="service"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                                 <option value="">Selecione um serviço</option>
                                 <option value="weight">Controle de Peso</option>
                                 <option value="sport">Nutrição Esportiva</option>
@@ -516,35 +557,40 @@
                                 <option value="special">Dietas Especiais</option>
                             </select>
                         </div>
-                        
+
                         <div>
                             <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                            <textarea id="message" rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
                         </div>
-                        
-                        <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg shadow-pink-200">
+
+                        <button type="submit"
+                            class="w-full bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg shadow-pink-200">
                             Enviar Mensagem
                         </button>
                     </form>
                 </div>
-                
+
                 <div class="lg:w-1/2">
                     <div class="bg-secondary bg-opacity-10 p-8 rounded-xl h-full">
                         <h3 class="text-2xl font-bold text-dark mb-6">Informações de Contato</h3>
-                        
+
                         <div class="space-y-6">
                             <div class="flex items-start">
-                                <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-4 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-4 mt-1">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-dark mb-1">Endereço</h4>
-                                    <p class="text-gray-600">Rua das Flores, 123 - Sala 302<br>Jardim Paulista, São Paulo - SP</p>
+                                    <p class="text-gray-600">Rua das Flores, 123 - Sala 302<br>Jardim Paulista, São
+                                        Paulo - SP</p>
                                 </div>
                             </div>
-                            
+
                             <div class="flex items-start">
-                                <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-4 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-4 mt-1">
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                                 <div>
@@ -552,9 +598,10 @@
                                     <p class="text-gray-600">(11) 98765-4321<br>(11) 1234-5678</p>
                                 </div>
                             </div>
-                            
+
                             <div class="flex items-start">
-                                <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-4 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-4 mt-1">
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div>
@@ -562,9 +609,10 @@
                                     <p class="text-gray-600">contato@nutrivida.com.br<br>draana@nutrivida.com.br</p>
                                 </div>
                             </div>
-                            
+
                             <div class="flex items-start">
-                                <div class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-4 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary mr-4 mt-1">
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div>
@@ -573,20 +621,24 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="mt-8">
                             <h4 class="font-bold text-dark mb-4">Redes Sociais</h4>
                             <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-opacity-90 transition">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-opacity-90 transition">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-opacity-90 transition">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-opacity-90 transition">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-opacity-90 transition">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-opacity-90 transition">
                                     <i class="fab fa-whatsapp"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-opacity-90 transition">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-opacity-90 transition">
                                     <i class="fab fa-youtube"></i>
                                 </a>
                             </div>
@@ -603,14 +655,16 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl">NV</div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl">
+                            NV</div>
                         <span class="ml-3 text-xl font-semibold">Nutri<span class="text-primary">Vida</span></span>
                     </div>
                     <p class="text-gray-400">
                         Nutrição personalizada para ajudar você a alcançar seus objetivos de saúde e bem-estar.
                     </p>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
                     <ul class="space-y-2">
@@ -621,32 +675,35 @@
                         <li><a href="#contact" class="text-gray-400 hover:text-primary transition">Contato</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Serviços</h4>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-primary transition">Controle de Peso</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-primary transition">Nutrição Esportiva</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-primary transition">Saúde Metabólica</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Nutrição Materno-Infantil</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Reeducação Alimentar</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Nutrição
+                                Materno-Infantil</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Reeducação Alimentar</a>
+                        </li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
                     <p class="text-gray-400 mb-4">
                         Assine nossa newsletter para receber dicas de nutrição e promoções especiais.
                     </p>
                     <form class="flex">
-                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <input type="email" placeholder="Seu e-mail"
+                            class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
                         <button type="submit" class="bg-primary hover:bg-opacity-90 px-4 py-2 rounded-r-lg">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 text-sm">
                     &copy; 2023 NutriVida. Todos os direitos reservados.
@@ -661,7 +718,8 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="fixed bottom-6 right-6 z-50">
-        <a href="#" class="w-16 h-16 rounded-full bg-green-500 text-white flex items-center justify-center shadow-xl hover:bg-green-600 transition">
+        <a href="#"
+            class="w-16 h-16 rounded-full bg-green-500 text-white flex items-center justify-center shadow-xl hover:bg-green-600 transition">
             <i class="fab fa-whatsapp text-2xl"></i>
         </a>
     </div>
@@ -671,15 +729,16 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
-        
+
         // Mobile menu toggle functionality would go here
         // You would need to add the mobile menu HTML and this JS to make it work
     </script>
 </body>
+
 </html>
